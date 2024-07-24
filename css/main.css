@@ -1,0 +1,159 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  --cold-color: #2195f39e;
+  --hot-color-alt: #e07f179c;
+  --main-padding: 100px 0px;
+  --main-background-color: #ececec;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: rgb(0, 0, 0);
+  background-image: url("../images/golden-wheat-barley-fields-sunrise-generated-by-ai.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* Small */
+@media (min-width: 768px) {
+}
+/* Medium */
+@media (min-width: 992px) {
+  .weather-container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+}
+/* Start Weather Container */
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  height: 80vh;
+  gap: 30px;
+}
+/* End Weather Container */
+/* Start search bar */
+.search-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 10%;
+}
+.search-bar input[type="text"] {
+  width: 60%;
+  background-color: white;
+  border-radius: 25px;
+  border: none;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+.search-bar span {
+  transform: translate(-38px, 45%);
+  cursor: pointer;
+  height: 35px;
+}
+.search-bar span i {
+  /* color: transparent; */
+  font-size: 22px;
+}
+/* End search bar */
+/* Start information */
+.info {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(3 169 244 / 78%);
+  width: 100%;
+  border-radius: 30px;
+  padding: 35px;
+  gap: 70px;
+}
+.info .city {
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+/* End information */
+/* Start time and location */
+.time {
+  display: flex;
+  margin-left: 10px;
+  gap: 10px;
+}
+/* End time and location */
+/* Start temperature */
+.temperature {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  font-size: 50px;
+}
+.temp,
+.min-temp,
+.max-temp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.temperature .word {
+  font-size: 30px;
+  font-weight: bold;
+}
+.temp i::before {
+  color: #ffb200;
+}
+.min-temp i::before {
+  color: #4040d7;
+}
+.max-temp i::before {
+  color: #e4003a;
+}
+@media (max-width: 600px) {
+  .temperature {
+    font-size: 40px;
+  }
+  .temperature .word {
+    font-size: 20px;
+  }
+}
+@media (max-width: 460px) {
+  .temperature {
+    font-size: 35px;
+  }
+  .temperature .word {
+    font-size: 20px;
+  }
+}
+/* End temperature */
+/* Start wind and humidity */
+.climate {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -20px;
+  justify-content: space-around;
+  font-size: 20px;
+}
+.wind,
+.humidity {
+  display: flex;
+}
+.wind div,
+.humidity div {
+  font-weight: bold;
+}
+
+.wind span,
+.humidity span {
+  padding: 0px 10px;
+}
+/* End wind and humidity */
