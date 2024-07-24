@@ -3,22 +3,24 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-:root {
-  --cold-color: #2195f39e;
-  --hot-color-alt: #e07f179c;
-  --main-padding: 100px 0px;
-  --main-background-color: #ececec;
-}
 body {
   font-family: "Cairo", sans-serif;
   background-color: rgb(0, 0, 0);
-  background-image: url("../images/golden-wheat-barley-fields-sunrise-generated-by-ai.jpg");
+  background-image: url("../images/body.jpg");
   background-position: center;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin: 0;
+}
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #00000059;
+  z-index: -1;
 }
 /* Small */
 @media (min-width: 768px) {
@@ -36,9 +38,15 @@ body {
 .weather-container {
   display: flex;
   flex-direction: column;
-  margin: 20px auto;
+  margin: 0px auto;
   height: 80vh;
   gap: 30px;
+  padding-top: 40px;
+}
+@media (max-width: 768px) {
+  .weather-container {
+    padding-top: 30px;
+  }
 }
 /* End Weather Container */
 /* Start search bar */
@@ -71,7 +79,7 @@ body {
 .info {
   display: flex;
   flex-direction: column;
-  background-color: rgb(3 169 244 / 78%);
+  background-color: rgb(3 169 244 / 0.65);
   width: 100%;
   border-radius: 30px;
   padding: 35px;
@@ -109,7 +117,7 @@ body {
   font-size: 30px;
   font-weight: bold;
 }
-.temp i::before {
+.temp i {
   color: #ffb200;
 }
 .min-temp i::before {
