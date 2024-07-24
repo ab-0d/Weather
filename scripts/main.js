@@ -10,7 +10,7 @@ let day = document.querySelector(".time-location .day");
 let searchInput = document.querySelector(".search-bar input");
 let searchIcon = document.querySelector(".searchbar-icon");
 let tepmIcon = document.querySelector(".temp i");
-const apiKey = OPENWEATHERMAP_API_KEY;
+const apiKey = "6285806a53096d6487bada69aa5301e3";
 let cityName = "";
 // Function to fetch weather data from OpenWeatherMap API
 const fetchData = async (cityName) => {
